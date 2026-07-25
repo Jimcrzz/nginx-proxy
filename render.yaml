@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: nginx-proxy
+    runtime: docker
+    plan: free
+    ports:
+      - port: 80
+        protocol: HTTP
+    healthCheckPath: /
+    autoDeploy: true
